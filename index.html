@@ -5,28 +5,81 @@
   <meta name="viewport" content="width=, initial-scale=1.0">
   <title>Tela de Login</title>
 </head>
-<style>
+ <style>
+       
+        body {
+         
+            background-color: #007bff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width:100%;
+            max-width: 350px; 
+            text-align: center;
+        }
+
+        .login-container h2 {
+        
+            color: #007bff; 
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+            font-size: 16px;
+            outline: none; 
+        }
+
+        .input-group input:focus {
+        
+            border-color: #007bff;
+            box-shadow: 0 0 0 1px #007bff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3; 
+        }
 
 
-
-
-.group input{
-    width: 80%;
-    padding: 0.75rem;
-    border: 1px solid;
-
-}
-button{
-  width: 80%;
-  padding: 0.50rem;
-  border:solid;
-  color:blue;
-  
-}
-
-
-
-</style>
+        </style>
+        </head>
   <body>
     
 
@@ -35,24 +88,20 @@ button{
   </div>
        <div class="usuario">
           <form action="#" method="post" class="login-form">
-          <h1>Login</h1>
+          <h2>Login</h2>
           <div class="group">  
 </form>
         <label for="name"></label>
         <input type="name" name="name" id="name" required>
   
-        <div class="group>
+        <div class="group">
         <label for="senha"></label>
         <input type="senha"id="senha" name="senha" >
 
        </div>
        <button type="submit">Entrar </button>
-      <div class=""></div>
- 
 
-
-
-
+      <div class="limpar"></div>
    
 </body>
 </html>
