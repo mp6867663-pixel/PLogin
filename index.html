@@ -1,129 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>Tela de Login</title>
-</head>
- <style>
-       
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Profissional</title>
+    <style>
+     
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+    
         body {
-         
-            background-color: #75808d; 
+            
+            background-color: #f0f2f5; 
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin:1;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            
-          
+           
+            min-height: 100vh; 
+            font-family: 'Arial', sans-serif;
+            color: #333;
         }
 
-        .login-container {
+        .main-wrapper {
+            display: flex;
             background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            width:100%;
-            max-width: 350px; 
-            text-align: center;
-            margin: 1px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            max-width: 900px; 
+            width: 90%; 
+            overflow: hidden; 
         }
 
-        .login-container h2 {
-        
-            color: #5d7085; 
+        .image-section {
+            flex: 1; 
+            min-width: 350px; 
+            background-color: #e0e7ee; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .login-section {
+            flex: 1; 
+            padding: 40px 30px;
+            display: flex;
+            
+        }
+
+        .login-section h2 {
+            color: #4d5aa7; 
             margin-bottom: 30px;
-            font-size: 1.5em;
-            letter-spacing: 2px;
-            font-weight: bold;
-          
+            font-size: 1.8em;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
         .input-group {
             margin-bottom: 20px;
-            
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.9em;
+            font-weight: 500;
         }
 
         .input-group input {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box; 
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
             font-size: 16px;
-            outline: none; 
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
         }
 
         .input-group input:focus {
-        
-            border-color: #ff9100;
-            box-shadow: 0 0 0 1px #7188a1;
-          
+            border-color: #020a3b; 
+            box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
         }
 
+        /* Botão de Envio */
         .submit-btn {
             width: 100%;
-            padding: 12px;
-            background-color: #717c88; 
+            padding: 14px;
+            background-color: #495079;
             color: #fff;
-            border: 2px solid;
-            border-radius: 5px;
+            border: none;
+            border-radius: 6px;
             font-size: 1em;
             cursor: pointer;
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-            margin: 1px;
+            transition: background-color 0.3s ease, transform 0.1s;
+            margin-top: 10px;
         }
 
         .submit-btn:hover {
-            background-color: #838e99; 
+            background-color: #373e6b; 
+        }
+        
+        .submit-btn:active {
+            transform: scale(0.99);
         }
 
-       .caixa{
-        border:2px solid ;
-        display: flex;
-        margin: 3pxpx;
-       }
-       .caixa usuario input{
-         margin: 1px;
-         width: 100%;
-         padding: 9px;
-         border: 2px solid;
-         border-radius: 2px;
+        @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column; 
+                max-width: 400px;
+            }
 
+            .image-section {
+                display: none; 
+            }
 
-       }
-        </style>
-        </head>
-  <body>
-    
-<div>
-  <div class="caixa">
-  <img src="leao.jpg" borde="2px" width="450">
-  
-  
-       <div class="usuario">
-          <form action="#" method="post" class="login-form" >
-          <h2>Login</h2>
-          <div class="group">  
-</form>
-        <label for="name"></label>
-        <input type="name" name="name" id="name" required>
-  
-        <div class="group">
-        <label for="senha"></label>
-        <input type="senha"id="senha" name="senha" >
+            .login-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="image-section">
+            <img 
+                src="leao.jpg" 
+                alt="Imagem de Fundo Decorativa" 
+                onerror="this.style.display='none'" 
+            >
+        </div>
 
-       </div>
-       <button type="submit">Entrar </button>
+        <div class="login-section">
+            <h2>Bem-Vindo!</h2>
+            <form action="#" method="post" class="login-form">
+                
+                <div class="input-group">
+                    <label for="username">Usuário (E-mail ou Nome)</label>
+                    <input 
+                        type="email" 
+                        name="username" 
+                        id="username" 
+                        required
+                    >
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="submit-btn">Entrar</button>
 
-      <div class="limpar"></div>
-   </div>
-   </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
